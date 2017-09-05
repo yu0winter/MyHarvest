@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D2E3F4332EAC507A0997CD2 /* Pods_MyHarvest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788030A41EC6C9ACC3A23F21 /* Pods_MyHarvest.framework */; };
+		EA15CE891F5D9C0E001E4288 /* Pods_MyHarvest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788030A41EC6C9ACC3A23F21 /* Pods_MyHarvest.framework */; };
 		EA2A6B681F5AFE1D007F533E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A6B671F5AFE1D007F533E /* AppDelegate.swift */; };
 		EA2A6B6A1F5AFE1D007F533E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A6B691F5AFE1D007F533E /* ViewController.swift */; };
 		EA2A6B6D1F5AFE1D007F533E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B6B1F5AFE1D007F533E /* Main.storyboard */; };
@@ -19,6 +19,7 @@
 		6AA598D6289906E59E0BBD4F /* Pods-MyHarvest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyHarvest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyHarvest/Pods-MyHarvest.debug.xcconfig"; sourceTree = "<group>"; };
 		788030A41EC6C9ACC3A23F21 /* Pods_MyHarvest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyHarvest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB09DB4D41DA609490C2BB3F /* Pods-MyHarvest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyHarvest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyHarvest/Pods-MyHarvest.release.xcconfig"; sourceTree = "<group>"; };
+		EA15CE871F5D9BAD001E4288 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MyHarvest-apbwbknnxnxrllggztmrounkcraf/Build/Products/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		EA2A6B641F5AFE1D007F533E /* MyHarvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHarvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2A6B671F5AFE1D007F533E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA2A6B691F5AFE1D007F533E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +27,9 @@
 		EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2A6B711F5AFE1D007F533E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA2A6B731F5AFE1D007F533E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4B85E51F5C45D300739761 /* MyHarvest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyHarvest-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA4B85E91F5C47B200739761 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EA552C7E1F5D927800FF51A0 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MyHarvest-apbwbknnxnxrllggztmrounkcraf/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2E3F4332EAC507A0997CD2 /* Pods_MyHarvest.framework in Frameworks */,
+				EA15CE891F5D9C0E001E4288 /* Pods_MyHarvest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +56,8 @@
 		CADC3C2E009D67B60BDD9235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA15CE871F5D9BAD001E4288 /* SDWebImage.framework */,
+				EA552C7E1F5D927800FF51A0 /* SDWebImage.framework */,
 				788030A41EC6C9ACC3A23F21 /* Pods_MyHarvest.framework */,
 			);
 			name = Frameworks;
@@ -96,6 +102,8 @@
 				EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */,
 				EA2A6B701F5AFE1D007F533E /* LaunchScreen.storyboard */,
 				EA2A6B731F5AFE1D007F533E /* Info.plist */,
+				EA4B85E51F5C45D300739761 /* MyHarvest-Bridging-Header.h */,
+				EA4B85E91F5C47B200739761 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 					EA2A6B631F5AFE1D007F533E = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 27P38Y7966;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -333,6 +342,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -375,6 +385,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -385,12 +396,20 @@
 			baseConfigurationReference = 6AA598D6289906E59E0BBD4F /* Pods-MyHarvest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 27P38Y7966;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MyHarvest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyl.MyHarvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyHarvest/MyHarvest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/lib";
 			};
 			name = Debug;
 		};
@@ -399,12 +418,19 @@
 			baseConfigurationReference = AB09DB4D41DA609490C2BB3F /* Pods-MyHarvest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 27P38Y7966;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MyHarvest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyl.MyHarvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyHarvest/MyHarvest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/lib";
 			};
 			name = Release;
 		};
