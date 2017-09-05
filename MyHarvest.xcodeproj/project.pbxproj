@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		EA15CE891F5D9C0E001E4288 /* Pods_MyHarvest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788030A41EC6C9ACC3A23F21 /* Pods_MyHarvest.framework */; };
 		EA2A6B681F5AFE1D007F533E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A6B671F5AFE1D007F533E /* AppDelegate.swift */; };
-		EA2A6B6A1F5AFE1D007F533E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2A6B691F5AFE1D007F533E /* ViewController.swift */; };
 		EA2A6B6D1F5AFE1D007F533E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B6B1F5AFE1D007F533E /* Main.storyboard */; };
 		EA2A6B6F1F5AFE1D007F533E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */; };
 		EA2A6B721F5AFE1D007F533E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B701F5AFE1D007F533E /* LaunchScreen.storyboard */; };
+		EA3029891F5EF41F00B07596 /* MHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029881F5EF41F00B07596 /* MHBaseViewController.swift */; };
+		EA30298F1F5EF5B800B07596 /* MHMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30298E1F5EF5B800B07596 /* MHMineViewController.swift */; };
+		EA3029911F5EF8D800B07596 /* MHLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029901F5EF8D800B07596 /* MHLoginViewController.swift */; };
+		EA3029931F5EF8E000B07596 /* MHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029921F5EF8E000B07596 /* MHHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +25,14 @@
 		EA15CE871F5D9BAD001E4288 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MyHarvest-apbwbknnxnxrllggztmrounkcraf/Build/Products/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
 		EA2A6B641F5AFE1D007F533E /* MyHarvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHarvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2A6B671F5AFE1D007F533E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA2A6B691F5AFE1D007F533E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA2A6B6C1F5AFE1D007F533E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2A6B711F5AFE1D007F533E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA2A6B731F5AFE1D007F533E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA3029881F5EF41F00B07596 /* MHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHBaseViewController.swift; sourceTree = "<group>"; };
+		EA30298E1F5EF5B800B07596 /* MHMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMineViewController.swift; sourceTree = "<group>"; };
+		EA3029901F5EF8D800B07596 /* MHLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHLoginViewController.swift; sourceTree = "<group>"; };
+		EA3029921F5EF8E000B07596 /* MHHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHHomeViewController.swift; sourceTree = "<group>"; };
 		EA4B85E51F5C45D300739761 /* MyHarvest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyHarvest-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA4B85E91F5C47B200739761 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EA552C7E1F5D927800FF51A0 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MyHarvest-apbwbknnxnxrllggztmrounkcraf/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
@@ -94,6 +100,77 @@
 			path = MyHarvest;
 			sourceTree = "<group>";
 		};
+		EA3029801F5EF2CA00B07596 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EA3029841F5EF3C500B07596 /* BaseModel */,
+				EA3029831F5EF2E200B07596 /* BaseService */,
+				EA3029821F5EF2DC00B07596 /* BaseView */,
+				EA3029811F5EF2D300B07596 /* BaseController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EA3029811F5EF2D300B07596 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				EA3029881F5EF41F00B07596 /* MHBaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		EA3029821F5EF2DC00B07596 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		EA3029831F5EF2E200B07596 /* BaseService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseService;
+			sourceTree = "<group>";
+		};
+		EA3029841F5EF3C500B07596 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		EA30298A1F5EF43200B07596 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EA3029901F5EF8D800B07596 /* MHLoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EA30298B1F5EF43A00B07596 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EA3029921F5EF8E000B07596 /* MHHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EA30298C1F5EF44600B07596 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		EA30298D1F5EF57000B07596 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				EA30298E1F5EF5B800B07596 /* MHMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
 		EA4B85DA1F5B096D00739761 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +188,11 @@
 		EA4B85DB1F5B09BD00739761 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EA2A6B691F5AFE1D007F533E /* ViewController.swift */,
+				EA3029801F5EF2CA00B07596 /* Base */,
+				EA30298C1F5EF44600B07596 /* Public */,
+				EA30298D1F5EF57000B07596 /* Mine */,
+				EA30298B1F5EF43A00B07596 /* Home */,
+				EA30298A1F5EF43200B07596 /* Login */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -269,8 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2A6B6A1F5AFE1D007F533E /* ViewController.swift in Sources */,
 				EA2A6B681F5AFE1D007F533E /* AppDelegate.swift in Sources */,
+				EA3029931F5EF8E000B07596 /* MHHomeViewController.swift in Sources */,
+				EA3029911F5EF8D800B07596 /* MHLoginViewController.swift in Sources */,
+				EA30298F1F5EF5B800B07596 /* MHMineViewController.swift in Sources */,
+				EA3029891F5EF41F00B07596 /* MHBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
