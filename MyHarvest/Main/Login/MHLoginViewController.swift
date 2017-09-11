@@ -12,7 +12,7 @@ class MHLoginViewController: MHBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "登录"
         // Do any additional setup after loading the view.
     }
 

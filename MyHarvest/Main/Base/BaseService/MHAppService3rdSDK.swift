@@ -13,9 +13,6 @@ class MHAppService3rdSDK: NSObject , UIApplicationDelegate {
     static var sharedInstance = MHAppService3rdSDK.init()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        print("注册三方库")
         return true
     }
 }
