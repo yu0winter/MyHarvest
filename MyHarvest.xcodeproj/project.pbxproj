@@ -16,6 +16,11 @@
 		EA30298F1F5EF5B800B07596 /* MHMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30298E1F5EF5B800B07596 /* MHMineViewController.swift */; };
 		EA3029911F5EF8D800B07596 /* MHLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029901F5EF8D800B07596 /* MHLoginViewController.swift */; };
 		EA3029931F5EF8E000B07596 /* MHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029921F5EF8E000B07596 /* MHHomeViewController.swift */; };
+		EA6646241F65789E0001E9D9 /* SOAComponentAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6646231F65789E0001E9D9 /* SOAComponentAppDelegate.swift */; };
+		EA66462A1F658A5E0001E9D9 /* MHAppService3rdSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6646291F658A5E0001E9D9 /* MHAppService3rdSDK.swift */; };
+		EA66462C1F658A8B0001E9D9 /* MHAppServiceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66462B1F658A8B0001E9D9 /* MHAppServiceLocation.swift */; };
+		EA66462E1F658AA30001E9D9 /* MHAppServiceLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66462D1F658AA30001E9D9 /* MHAppServiceLocalNotification.swift */; };
+		EA6646301F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66462F1F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,12 @@
 		EA4B85E51F5C45D300739761 /* MyHarvest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyHarvest-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA4B85E91F5C47B200739761 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EA552C7E1F5D927800FF51A0 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MyHarvest-apbwbknnxnxrllggztmrounkcraf/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		EA6646221F65401C0001E9D9 /* MHHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHeader.h; sourceTree = "<group>"; };
+		EA6646231F65789E0001E9D9 /* SOAComponentAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOAComponentAppDelegate.swift; sourceTree = "<group>"; };
+		EA6646291F658A5E0001E9D9 /* MHAppService3rdSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppService3rdSDK.swift; sourceTree = "<group>"; };
+		EA66462B1F658A8B0001E9D9 /* MHAppServiceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppServiceLocation.swift; sourceTree = "<group>"; };
+		EA66462D1F658AA30001E9D9 /* MHAppServiceLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppServiceLocalNotification.swift; sourceTree = "<group>"; };
+		EA66462F1F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppServiceRemoteNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +140,11 @@
 		EA3029831F5EF2E200B07596 /* BaseService */ = {
 			isa = PBXGroup;
 			children = (
+				EA6646231F65789E0001E9D9 /* SOAComponentAppDelegate.swift */,
+				EA6646291F658A5E0001E9D9 /* MHAppService3rdSDK.swift */,
+				EA66462B1F658A8B0001E9D9 /* MHAppServiceLocation.swift */,
+				EA66462D1F658AA30001E9D9 /* MHAppServiceLocalNotification.swift */,
+				EA66462F1F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift */,
 			);
 			path = BaseService;
 			sourceTree = "<group>";
@@ -200,6 +216,8 @@
 		EA4B85DC1F5B09C900739761 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				EA6646201F653F9D0001E9D9 /* Marcos */,
+				EA6646211F653FBB0001E9D9 /* Constants */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -223,6 +241,21 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		EA6646201F653F9D0001E9D9 /* Marcos */ = {
+			isa = PBXGroup;
+			children = (
+				EA6646221F65401C0001E9D9 /* MHHeader.h */,
+			);
+			path = Marcos;
+			sourceTree = "<group>";
+		};
+		EA6646211F653FBB0001E9D9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,9 +383,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6646301F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift in Sources */,
+				EA6646241F65789E0001E9D9 /* SOAComponentAppDelegate.swift in Sources */,
 				EA2A6B681F5AFE1D007F533E /* AppDelegate.swift in Sources */,
 				EA3029931F5EF8E000B07596 /* MHHomeViewController.swift in Sources */,
+				EA66462A1F658A5E0001E9D9 /* MHAppService3rdSDK.swift in Sources */,
+				EA66462C1F658A8B0001E9D9 /* MHAppServiceLocation.swift in Sources */,
 				EA3029911F5EF8D800B07596 /* MHLoginViewController.swift in Sources */,
+				EA66462E1F658AA30001E9D9 /* MHAppServiceLocalNotification.swift in Sources */,
 				EA30298F1F5EF5B800B07596 /* MHMineViewController.swift in Sources */,
 				EA3029891F5EF41F00B07596 /* MHBaseViewController.swift in Sources */,
 			);
