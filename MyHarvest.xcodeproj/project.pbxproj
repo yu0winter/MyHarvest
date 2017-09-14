@@ -16,6 +16,8 @@
 		EA2A6B6D1F5AFE1D007F533E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B6B1F5AFE1D007F533E /* Main.storyboard */; };
 		EA2A6B6F1F5AFE1D007F533E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */; };
 		EA2A6B721F5AFE1D007F533E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2A6B701F5AFE1D007F533E /* LaunchScreen.storyboard */; };
+		EA2B7CB41F681FE100CC1F12 /* MHAppServiceDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B7CB31F681FE100CC1F12 /* MHAppServiceDataBase.swift */; };
+		EA2B7CB81F6823AA00CC1F12 /* MHMessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B7CB71F6823AA00CC1F12 /* MHMessageInfo.swift */; };
 		EA3029891F5EF41F00B07596 /* MHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029881F5EF41F00B07596 /* MHBaseViewController.swift */; };
 		EA30298F1F5EF5B800B07596 /* MHMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30298E1F5EF5B800B07596 /* MHMineViewController.swift */; };
 		EA3029911F5EF8D800B07596 /* MHLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3029901F5EF8D800B07596 /* MHLoginViewController.swift */; };
@@ -47,6 +49,8 @@
 		EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2A6B711F5AFE1D007F533E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA2A6B731F5AFE1D007F533E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2B7CB31F681FE100CC1F12 /* MHAppServiceDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppServiceDataBase.swift; sourceTree = "<group>"; };
+		EA2B7CB71F6823AA00CC1F12 /* MHMessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMessageInfo.swift; sourceTree = "<group>"; };
 		EA3029881F5EF41F00B07596 /* MHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHBaseViewController.swift; sourceTree = "<group>"; };
 		EA30298E1F5EF5B800B07596 /* MHMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMineViewController.swift; sourceTree = "<group>"; };
 		EA3029901F5EF8D800B07596 /* MHLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHLoginViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				EA66462B1F658A8B0001E9D9 /* MHAppServiceLocation.swift */,
 				EA66462D1F658AA30001E9D9 /* MHAppServiceLocalNotification.swift */,
 				EA66462F1F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift */,
+				EA2B7CB31F681FE100CC1F12 /* MHAppServiceDataBase.swift */,
 			);
 			path = BaseService;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3029921F5EF8E000B07596 /* MHHomeViewController.swift */,
+				EA2B7CB71F6823AA00CC1F12 /* MHMessageInfo.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -417,7 +423,9 @@
 				EA1FCBEA1F66DD71001D6FFB /* LunarCore.m in Sources */,
 				EA1FCBEB1F66DD71001D6FFB /* SRLunarCalendar.m in Sources */,
 				EA1FCBEC1F66DD71001D6FFB /* SRLunarWrapper.m in Sources */,
+				EA2B7CB81F6823AA00CC1F12 /* MHMessageInfo.swift in Sources */,
 				EA6646241F65789E0001E9D9 /* SOAComponentAppDelegate.swift in Sources */,
+				EA2B7CB41F681FE100CC1F12 /* MHAppServiceDataBase.swift in Sources */,
 				EA1FCBE21F66D3E7001D6FFB /* NSDate+Extension.m in Sources */,
 				EA2A6B681F5AFE1D007F533E /* AppDelegate.swift in Sources */,
 				EA3029931F5EF8E000B07596 /* MHHomeViewController.swift in Sources */,

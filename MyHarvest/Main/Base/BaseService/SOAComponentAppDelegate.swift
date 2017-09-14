@@ -22,6 +22,7 @@ class SOAComponentAppDelegate: NSObject {
         MHAppServiceLocation.sharedInstance,
         MHAppServiceLocalNotification.sharedInstance,
         MHAppServiceRemoteNotification.sharedInstance,
+        MHAppServiceDataBase(),
         ]
     
 }

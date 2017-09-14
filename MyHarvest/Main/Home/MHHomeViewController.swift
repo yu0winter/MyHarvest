@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
 
@@ -53,6 +54,21 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     }
     /// 获取数据
     func fetchContentData() {
+
+        
+        MHMessageInfo.demoData()
+        //使用默认的数据库
+        let realm = try! Realm()
+        
+        //打印出数据库地址
+        print(realm.configuration.fileURL!)
+        //查询所有的消费记录
+        let items = realm.objects(MHMessageInfo.self)
+        //已经有记录的话就不插入了
+        
+        for info in items {
+            print("info:\(info.text),\(info.timeStamp),\(info.stars)")
+        }
         
     }
     
@@ -144,6 +160,9 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
          return SRLunarWrapper.dayDescription(with: date)
     }
     // MARK: - Custom Method    自定义方法
+    // MARK: └ DataBase
+
+    
     // MARK: └ Other
     // MARK: - Custom Accessors 自定义属性
     fileprivate lazy var scopeGesture: UIPanGestureRecognizer = {
