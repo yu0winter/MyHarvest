@@ -9,7 +9,8 @@
 import UIKit
 import RealmSwift
 
-class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate {
+class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource
+{
 
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
@@ -35,7 +36,13 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     func setupContentViews() {
         
         self.view.addGestureRecognizer(self.scopeGesture)
-        self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
+        
+        let identifier = String(describing: type(of: MHHomeTableViewCell()))
+        let nib = UINib.init(nibName: identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: identifier)
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
         
         calendar.backgroundColor = UIColor.init(white: 0, alpha: 0.1)
         calendar.scope = .month
@@ -56,20 +63,20 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     func fetchContentData() {
 
         
-        MHMessageInfo.demoData()
-        //使用默认的数据库
-        let realm = try! Realm()
-        
-        //打印出数据库地址
-        print(realm.configuration.fileURL!)
-        //查询所有的消费记录
-        let items = realm.objects(MHMessageInfo.self)
-        //已经有记录的话就不插入了
-        
-        for info in items {
-            print("info:\(info.text),\(info.timeStamp),\(info.stars)")
-        }
-        
+////        MHMessageInfo.demoData()
+//        //使用默认的数据库
+//        let realm = try! Realm()
+//
+//        //打印出数据库地址
+//        print(realm.configuration.fileURL!)
+//        //查询所有的消费记录
+//        let items = realm.objects(MHMessageInfo.self)
+//        //已经有记录的话就不插入了
+//
+//        for info in items {
+//            print("info:\(info.text),\(info.timeStamp),\(info.stars)")
+//        }
+//
     }
     
     /// 绘制界面
@@ -159,6 +166,37 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
          return SRLunarWrapper.dayDescription(with: date)
     }
+    
+    
+    // MARK: └ UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        /// TODO: 进入编辑信息页
+        let info = MHMessageInfo.init()
+        info.infoID = String.init(indexPath.row)
+        info.title = "我是第\(indexPath.row)个"
+        info.text = "内容信息"
+        
+        let vc = MHEditViewController.init(info: info)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    // MARK: └ UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10;
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let identifier = String(describing: type(of: MHHomeTableViewCell()))
+        let cell:MHHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier) as! MHHomeTableViewCell
+
+        cell.indexLabel.text = String.init(indexPath.row)
+        
+        return cell;
+    }
+    
+    
+    
     // MARK: - Custom Method    自定义方法
     // MARK: └ DataBase
 

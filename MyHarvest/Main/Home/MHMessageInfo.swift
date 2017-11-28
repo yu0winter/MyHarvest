@@ -9,5 +9,7 @@
 import UIKit
 
 class MHMessageInfo: NSObject {
-
+    public var infoID: String?
+    public var title: String?
+    public var text: String?
 }
