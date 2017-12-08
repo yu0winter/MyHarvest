@@ -92,6 +92,34 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		22F374E71FDA90D7002B6EC6 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		22F374E81FDA90E2002B6EC6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		22F374E91FDA915E002B6EC6 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		22F374EA1FDA9164002B6EC6 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		69F8852370D3BF2AF6CB2E0A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +175,8 @@
 			children = (
 				EA4B85DB1F5B09BD00739761 /* Main */,
 				EA4B85DD1F5B09D300739761 /* Expand */,
-				EA4B85E01F5B0A4500739761 /* Resources */,
 				EA4B85E11F5B0A4D00739761 /* Vendor */,
+				22F374E81FDA90E2002B6EC6 /* Resource */,
 				EA4B85DC1F5B09C900739761 /* Config */,
 				EA4B85DA1F5B096D00739761 /* Supporting Files */,
 			);
@@ -158,9 +186,8 @@
 		EA3029801F5EF2CA00B07596 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EA3029841F5EF3C500B07596 /* BaseModel */,
-				EA3029831F5EF2E200B07596 /* BaseService */,
-				EA3029821F5EF2DC00B07596 /* BaseView */,
+				22F374EA1FDA9164002B6EC6 /* BaseView */,
+				22F374E91FDA915E002B6EC6 /* BaseModel */,
 				EA3029811F5EF2D300B07596 /* BaseController */,
 			);
 			path = Base;
@@ -174,14 +201,7 @@
 			path = BaseController;
 			sourceTree = "<group>";
 		};
-		EA3029821F5EF2DC00B07596 /* BaseView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseView;
-			sourceTree = "<group>";
-		};
-		EA3029831F5EF2E200B07596 /* BaseService */ = {
+		EA3029831F5EF2E200B07596 /* AppService */ = {
 			isa = PBXGroup;
 			children = (
 				EA6646231F65789E0001E9D9 /* SOAComponentAppDelegate.swift */,
@@ -191,14 +211,7 @@
 				EA66462F1F658AB10001E9D9 /* MHAppServiceRemoteNotification.swift */,
 				EA2B7CB31F681FE100CC1F12 /* MHAppServiceDataBase.swift */,
 			);
-			path = BaseService;
-			sourceTree = "<group>";
-		};
-		EA3029841F5EF3C500B07596 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseModel;
+			path = AppService;
 			sourceTree = "<group>";
 		};
 		EA30298A1F5EF43200B07596 /* Login */ = {
@@ -221,13 +234,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		EA30298C1F5EF44600B07596 /* Public */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Public;
-			sourceTree = "<group>";
-		};
 		EA30298D1F5EF57000B07596 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +245,7 @@
 		EA4B85DA1F5B096D00739761 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA3029831F5EF2E200B07596 /* AppService */,
 				EA2A6B671F5AFE1D007F533E /* AppDelegate.swift */,
 				EA2A6B6B1F5AFE1D007F533E /* Main.storyboard */,
 				EA2A6B6E1F5AFE1D007F533E /* Assets.xcassets */,
@@ -253,8 +260,8 @@
 		EA4B85DB1F5B09BD00739761 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				22F374E71FDA90D7002B6EC6 /* Public */,
 				EA3029801F5EF2CA00B07596 /* Base */,
-				EA30298C1F5EF44600B07596 /* Public */,
 				EA30298D1F5EF57000B07596 /* Mine */,
 				EA30298B1F5EF43A00B07596 /* Home */,
 				EA30298A1F5EF43200B07596 /* Login */,
@@ -279,13 +286,6 @@
 				EA1FCBDF1F66CF5F001D6FFB /* FSCalendar_Customized.h */,
 			);
 			path = Expand;
-			sourceTree = "<group>";
-		};
-		EA4B85E01F5B0A4500739761 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		EA4B85E11F5B0A4D00739761 /* Vendor */ = {
@@ -393,21 +393,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyHarvest/Pods-MyHarvest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
