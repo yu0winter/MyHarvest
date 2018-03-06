@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="16c-5e-RGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="16c-5e-RGG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,9 +32,9 @@
         <scene sceneID="mHh-TH-IHS">
             <objects>
                 <navigationController id="fm4-M9-gzC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="今天" id="Mc4-uV-Ezj"/>
+                    <tabBarItem key="tabBarItem" title="今天" image="toolbar_today" selectedImage="toolbar_today_pre" id="Mc4-uV-Ezj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSz-Qx-3rH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -102,9 +103,9 @@
         <scene sceneID="ZaV-Lv-xq3">
             <objects>
                 <navigationController id="BZj-N7-hdW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="收获" id="SP5-bz-JNI"/>
+                    <tabBarItem key="tabBarItem" title="收获" image="toolbar_tover" id="SP5-bz-JNI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o5X-AR-F7j">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -138,9 +139,9 @@
         <scene sceneID="301-DQ-iX0">
             <objects>
                 <navigationController id="bdW-fx-4mx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="mcs-Qj-seY"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="toolbar_my_pre" id="mcs-Qj-seY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gfd-od-DM7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -171,4 +172,10 @@
             <point key="canvasLocation" x="2500" y="2069"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="toolbar_my_pre" width="27" height="27"/>
+        <image name="toolbar_today" width="27" height="27"/>
+        <image name="toolbar_today_pre" width="27" height="27"/>
+        <image name="toolbar_tover" width="27" height="27"/>
+    </resources>
 </document>

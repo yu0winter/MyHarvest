@@ -99,13 +99,6 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
-		22F374E81FDA90E2002B6EC6 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		22F374E91FDA915E002B6EC6 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +169,6 @@
 				EA4B85DB1F5B09BD00739761 /* Main */,
 				EA4B85DD1F5B09D300739761 /* Expand */,
 				EA4B85E11F5B0A4D00739761 /* Vendor */,
-				22F374E81FDA90E2002B6EC6 /* Resource */,
 				EA4B85DC1F5B09C900739761 /* Config */,
 				EA4B85DA1F5B096D00739761 /* Supporting Files */,
 			);
