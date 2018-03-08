@@ -53,13 +53,6 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
         calendar.bottomBorder.isHidden = true;
         calendar.headerHeight = 0;
         
-        let imageView = FLAnimatedImageView.init(frame: CGRect.init(x: 100, y: 200, width: 100, height: 100))
-        imageView.backgroundColor = UIColor.blue
-        view.addSubview(imageView)
-        let url :URL? = URL.init(string: "http://easyond-product-img.b0.upaiyun.com/cms/47d75b7c183a489cb4d758ddd4ac74b6.gif")
-        imageView.sd_setImage(with: url, completed:nil)
-        imageView.runLoopMode = RunLoopMode.defaultRunLoopMode.rawValue
-        
         self.layoutPageSubViews()
     }
     /// 设置布局
