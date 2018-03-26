@@ -8,19 +8,29 @@
 
 import UIKit
 
-class MHEditViewController: UIViewController {
+class MHEditViewController: UIViewController,UITextViewDelegate {
     
     var info : MHMessageInfo?
     public convenience init(info: MHMessageInfo?) {
         self.init()
         self.info = info;
-        
     }
+    
+    var textView: UITextView = {
+        let textView = UITextView.init(frame: CGRect.init(x: 0, y: 64, width: MHScreenWidth, height: MHScreenHeight - 64))
+        textView.font = UIFont .systemFont(ofSize: 15)
+        textView.textColor = UIColor.black
+        return textView
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "编辑"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "确定", style: .done, target: self, action: #selector(self.rightBarItemAction))
+        self.view.backgroundColor = UIColor.white
+        self.view.addSubview(self.textView)
+        self.textView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +39,15 @@ class MHEditViewController: UIViewController {
     }
     
 
+    func rightBarItemAction() {
+        print("\(#function)")
+    }
+    
+    // MARK: - UITextViewDelegate
+    func textViewDidChange(_ textView: UITextView) {
+    
+    }
+    
     /*
     // MARK: - Navigation
 

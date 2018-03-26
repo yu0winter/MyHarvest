@@ -8,14 +8,14 @@
 
 import UIKit
 import RealmSwift
+import SnapKit
 
 class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalendarDelegate, UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource
 {
 
-    @IBOutlet weak var calendar: FSCalendar!
-    @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var tableView: UITableView!
+    var calendar: FSCalendar!
+    var calendarHeightConstraint: NSLayoutConstraint!
+    var tableView: UITableView!
     
     
     // MARK: - Lift Cycle 生命周期
@@ -27,23 +27,26 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     // MARK: └ View life
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "今天"
+        self.title = "今天"
         self.setupContentViews()
         self.fetchContentData()
         self.renderContentViews()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     /// 加载内容视图
     func setupContentViews() {
         
-        self.view.addGestureRecognizer(self.scopeGesture)
-        
-        let identifier = String(describing: type(of: MHHomeTableViewCell()))
-        let nib = UINib.init(nibName: identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: identifier)
-        tableView.dataSource = self;
-        tableView.delegate = self;
-        tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
-        
+        calendar = FSCalendar.init(frame:CGRect.zero)
         calendar.backgroundColor = UIColor.init(white: 0, alpha: 0.1)
         calendar.scope = .month
         calendar.delegate = self
@@ -52,11 +55,47 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
         calendar.topBorder.isHidden = true;
         calendar.bottomBorder.isHidden = true;
         calendar.headerHeight = 0;
+        calendar.select(Date())
+        
+        
+        let identifier = String(describing: type(of: MHHomeTableViewCell()))
+//        let nib = UINib.init(nibName: identifier, bundle: nil)
+        tableView = UITableView.init(frame:CGRect.zero, style: .plain)
+//        tableView.register(nib, forCellReuseIdentifier: identifier)
+        tableView.register(MHHomeTableViewCell.self , forCellReuseIdentifier: identifier)
+        tableView.dataSource = self;
+        tableView.delegate = self;
         
         self.layoutPageSubViews()
     }
     /// 设置布局
     func layoutPageSubViews() {
+        
+        view.addSubview(calendar)
+        calendar.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(40)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(300)
+        }
+        
+        for layout in calendar.constraints {
+            if layout.firstAttribute == .height {
+                self.calendarHeightConstraint = layout
+                break;
+            }
+        }
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(calendar.snp.bottom)
+        }
+        
+        self.view.addGestureRecognizer(self.scopeGesture)
+        
+        tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
+        
+        self.calendar.scope = .week
         
     }
     /// 获取数据
@@ -83,15 +122,6 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     func renderContentViews() {
         self.calendar.select(Date())
     }
-
-    /**
-     *  设置顶部导航栏拓展布局为空
-     edgesForExtendedLayout的默认值为UIRectEdgeAll。
-     当你的容器是navigation controller时，默认的布局将从navigation bar的顶部开始。即所有的UI元素都往上漂移了44pt。
-     */
-//    func setExtentdedLayoutEdgeZero() {
-//        self.edgesForExtendedLayout = UIRectEdge(rawValue: 0)
-//    }
     // MARK: - Event Response 事件响应
     // MARK: - Delegate Realization 委托方法
     // MARK: └ UIGestureRecognizerDelegate
@@ -113,8 +143,15 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     
     // MARK: └ FSCalendarDelegate
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        self.calendarHeightConstraint.constant = bounds.height
-        self.view.layoutIfNeeded()
+        if (self.calendarHeightConstraint != nil) {
+            if (self.calendarHeightConstraint.constant != bounds.height) {
+                
+                self.calendarHeightConstraint.constant = bounds.height
+                self.view.layoutIfNeeded()
+            }
+
+        }
+        
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -170,13 +207,13 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
     
     // MARK: └ UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         /// TODO: 进入编辑信息页
         let info = MHMessageInfo.init()
         info.infoID = String.init(indexPath.row)
         info.title = "我是第\(indexPath.row)个"
         info.text = "内容信息"
-        
+
         let vc = MHEditViewController.init(info: info)
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -189,8 +226,9 @@ class MHHomeViewController: MHBaseViewController,FSCalendarDataSource, FSCalenda
         
         let identifier = String(describing: type(of: MHHomeTableViewCell()))
         let cell:MHHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier) as! MHHomeTableViewCell
-
-        cell.indexLabel.text = String.init(indexPath.row)
+        
+        cell.titleLabel.text = String.init(indexPath.row)
+        cell.detailLabel.text = "哈哈哈"
         
         return cell;
     }
